@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\DB;
+use App\Http\Controllers\UserController;
 
 
 /*
@@ -19,9 +20,7 @@ Route::get('/', function () {
     return view('home');
 });
 
-Route::get('/home', function () {
-    return view('home');
-});
+Route::get('/home', [UserController::class, 'show']);
 
 Route::group(['prefix' => 'test'], function (){
     Route::get('/db', function () {

@@ -50,8 +50,7 @@
 
                         <!-- Submit Button -->
                         <div class="form-group col-lg-12 mx-auto mb-4">
-                            <button type="submit" class="btn btn-primary btn-block py-2"
-                                    style="border-color: #4e8eff !important; background: #4e8eff !important;">
+                            <button type="submit" class="btn btn-primary btn-block py-2">
                                 <span class="font-weight-bold">Login</span>
                             </button>
                         </div>
@@ -60,7 +59,7 @@
                             @if (Route::has('password.request'))
                                 <p class="text-muted font-weight-bold">  {{ __('Forgot Your Password?') }} <a
                                         href="{{ route('password.request') }}"
-                                        class="text-primary ml-2"  style="color:#4e8eff !important;">{{__('Click Here')}}</a>
+                                        class="text-primary ml-2">{{__('Click Here')}}</a>
                                 </p>
                             @endif
                         </div>

@@ -33,8 +33,7 @@
 
                         <!-- Submit Button -->
                         <div class="form-group col-lg-12 mx-auto mb-4">
-                            <button type="submit" class="btn btn-primary btn-block py-2"
-                                    style="border-color: #4e8eff !important; background: #4e8eff !important;">
+                            <button type="submit" class="btn btn-primary btn-block py-2">
                                 <span class="font-weight-bold">Send Password Reset Link</span>
                             </button>
                         </div>

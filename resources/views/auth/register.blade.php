@@ -72,14 +72,13 @@
                             </span>
                             </div>
                             <input id="password-confirm" type="password" name="password_confirmation"
-                                   psaceholder="Confirm Password"
+                                   placeholder="Confirm Password"
                                    class="form-control bg-white border-left-0 border-md" required
                                    autocomplete="new-password">
                         </div>
                         <!-- Submit Button -->
                         <div class="form-group col-lg-12 mx-auto mb-4">
-                            <button type="submit" class="btn btn-primary btn-block py-2"
-                                    style="border-color: #4e8eff !important; background: #4e8eff !important;">
+                            <button type="submit" class="btn btn-primary btn-block py-2">
                                 <span class="font-weight-bold">Register</span>
                             </button>
                         </div>
@@ -87,7 +86,7 @@
                         <!-- Already Registered -->
                         <div class="text-center w-100">
                             <p class="text-muted font-weight-bold">Already Registered? <a href="{{route('login')}}"
-                                                                                          class="text-primary ml-2" style="color:#4e8eff !important;">Login</a>
+                                                                                          class="text-primary ml-2">Login</a>
                             </p>
                         </div>
 

@@ -36,8 +36,8 @@
     <link type="text/css" href="{{ asset('css/app.css') }}" rel="stylesheet">
 </head>
 <body>
-<div id="app" style="height: 100vh">
-    <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm fixed-top">
+<div id="app" class="d-flex flex-column" style="height: 90vh">
+    <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm navbar-default navbar-static-top">
         <div class="container">
             <i class="fa fa-code align-items-center mr-3 fa-2x" style="color: #488eff"></i>
             <a class="navbar-brand" href="{{ url('/') }}">
@@ -93,7 +93,7 @@
         </div>
     </nav>
 
-    <main class="vh-100">
+    <main class="flex-grow-1 mt-3">
         @yield('content')
     </main>
 </div>
