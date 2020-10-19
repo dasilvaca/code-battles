@@ -134,3 +134,86 @@ body {
         }
     }
 }
+
+.home-full-height{
+    background: #213138;
+    color: $light;
+
+    @include media-breakpoint-up(md){
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+    }
+
+    .logo{
+        display: block;
+        margin: 0 auto 1rem;
+        max-width: 120px;
+        height: auto;
+    }
+
+    .content-area{
+        padding-left: 15px;
+        padding-right: 15px;
+        max-width: 1400px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .sidebar{
+        background: rgba(black, 0.1);
+        padding: 2rem 1rem;
+        height: 100vh;
+        overflow: auto;
+
+        @include media-breakpoint-up(md){
+            height: auto;
+        }
+
+        .title{
+            text-align: center;
+        }
+
+        .home-links{
+            list-style: none;
+            padding: 0;
+            margin: 0;
+
+            li{
+                padding: 0;
+                margin: 0.2rem 0;
+            }
+
+            a{
+                position: relative;
+                display: block;
+                font-size: 1.4rem;
+                color: $light;
+                text-decoration: none;
+                padding: 0.6rem 0.6rem 0.6rem 84px;
+                background: rgba(black, 0.2);
+                transition: background-color .3s;
+
+                &:hover{
+                    background: rgba(black, 0.4);
+                }
+
+                small{
+                    font-size: 0.8rem;
+                    display: block;
+                }
+
+                .icon{
+                    position: absolute;
+                    left: 22px;
+                    top: 50%;
+                    transform: translate(0, -50%);
+                    width: 42px;
+                    height: auto;
+                }
+            }
+        }
+    }
+}
