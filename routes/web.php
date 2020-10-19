@@ -20,7 +20,11 @@ Route::get('/', function () {
     return view('home');
 });
 
-Route::get('/home', [UserController::class, 'show']);
+Route::get('/home', function (){
+    return view('/home');
+});
+
+Route::get('/profile', [UserController::class, 'show'])->name('profile');
 
 Route::group(['prefix' => 'test'], function (){
     Route::get('/db', function () {

@@ -50,7 +50,7 @@
 
                         <!-- Submit Button -->
                         <div class="form-group col-lg-12 mx-auto mb-4">
-                            <button type="submit" class="btn btn-primary btn-block py-2">
+                            <button type="submit" class="btn btn-primary btn-block py-2 not-darken">
                                 <span class="font-weight-bold">Login</span>
                             </button>
                         </div>
@@ -73,12 +73,12 @@
 
                         <!-- Social Login -->
                         <div class="form-group col-lg-12 mx-auto">
-                            <a href="#" class="btn btn-primary btn-block py-2 btn-facebook"
+                            <a href="#" class="btn btn-primary btn-block py-2 btn-facebook not-darken"
                                style="background: #3b5998 !important; border-color: #3b5998 !important;">
                                 <i class="fa fa-facebook-f mr-2"></i>
                                 <span class="font-weight-bold">Continue with Facebook</span>
                             </a>
-                            <a href="#" class="btn btn-dark btn-block py-2 btn-twitter">
+                            <a href="#" class="btn btn-dark btn-block py-2 btn-github not-darken">
                                 <i class="fa fa-github mr-2"></i>
                                 <span class="font-weight-bold">Continue with Github</span>
                             </a>

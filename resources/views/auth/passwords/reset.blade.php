@@ -62,7 +62,7 @@
 
                         <!-- Submit Button -->
                         <div class="form-group col-lg-12 mx-auto mb-4">
-                            <button type="submit" class="btn btn-primary btn-block py-2">
+                            <button type="submit" class="btn btn-primary btn-block py-2 not-darken">
                                 <span class="font-weight-bold">Reset</span>
                             </button>
                         </div>
