@@ -37266,7 +37266,35 @@ module.exports = function(module) {
 
 __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 
-(function ($) {})($);
+(function ($) {
+  initTheme(); // dark mode switch
+
+  $("#theme-switch").on('change', function () {
+    console.log(this.checked);
+
+    if (this.checked) {
+      $('html').attr('theme', 'dark-theme');
+      $(this).attr('checked', 'checked');
+      localStorage.setItem('theme', 'dark-theme');
+    } else {
+      $('html').attr('theme', '');
+      $(this).attr('checked', '');
+      localStorage.removeItem('theme');
+    }
+  });
+
+  function initTheme() {
+    var isDarkThemeSelected = localStorage.getItem('theme') !== null && localStorage.getItem('theme') === 'dark-theme';
+    console.log(isDarkThemeSelected);
+
+    if (isDarkThemeSelected) {
+      $('html').attr('theme', 'dark-theme');
+      $('#theme-switch').attr('checked', 'checked');
+    } else {
+      $('html').attr('theme', '');
+    }
+  }
+})($);
 
 /***/ }),
 
@@ -37323,8 +37351,8 @@ __webpack_require__(/*! bootstrap */ "./node_modules/bootstrap/dist/js/bootstrap
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! /home/sukanta/Projects/Hacktoberfest/2020/code-battles/resources/js/app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! /home/sukanta/Projects/Hacktoberfest/2020/code-battles/resources/sass/app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! D:\laravel\git\code-battles\resources\js\app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! D:\laravel\git\code-battles\resources\sass\app.scss */"./resources/sass/app.scss");
 
 
 /***/ })

@@ -2,27 +2,28 @@ require('./bootstrap');
 (function ($) {
     initTheme();
 
-    // dark mode switch
+    // switching theme
     $("#theme-switch").on('change', function () {
         console.log(this.checked)
-        if(this.checked){
+        if (this.checked) {
             $('html').attr('theme', 'dark-theme');
             $(this).attr('checked', 'checked');
             localStorage.setItem('theme', 'dark-theme');
-        }else {
+        } else {
             $('html').attr('theme', '');
             $(this).attr('checked', '');
             localStorage.removeItem('theme');
         }
     });
 
-    function initTheme(){
+    // loading saved theme
+    function initTheme() {
         const isDarkThemeSelected = (localStorage.getItem('theme') !== null && localStorage.getItem('theme') === 'dark-theme');
         console.log(isDarkThemeSelected)
-        if(isDarkThemeSelected){
+        if (isDarkThemeSelected) {
             $('html').attr('theme', 'dark-theme');
             $('#theme-switch').attr('checked', 'checked');
-        }else{
+        } else {
             $('html').attr('theme', '');
         }
     }

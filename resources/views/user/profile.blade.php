@@ -55,9 +55,9 @@
                             <h6>BASIC PROFILE</h6>
                             <hr>
                             <center>
-{{--                                <img--}}
-{{--                                    src="{{asset('images/test_profile.jpg')}}"--}}
-{{--                                    width="140" height="140" class="rounded-circle" alt="user_picture">--}}
+                                {{--                                <img--}}
+                                {{--                                    src="{{asset('images/test_profile.jpg')}}"--}}
+                                {{--                                    width="140" height="140" class="rounded-circle" alt="user_picture">--}}
                                 <h3 class="media-heading">{{$user->name}}
                                     <small>{{$user->location ? $user->location :  'HU, Budapest'}}</small></h3>
                                 <span><strong>Rating: </strong></span>
@@ -117,6 +117,7 @@
                                 <button class="btn btn-danger not-darken" type="button">Delete Account</button>
                             </form>
                             <hr>
+                            {{-- dark mode switch --}}
                             <div class="d-flex justify-content-start align-items-center">
                                 <p class="m-0 mr-3">Enable dark mode</p>
                                 <label class="toggle-control">
@@ -124,6 +125,7 @@
                                     <span class="control"></span>
                                 </label>
                             </div>
+                            {{-- dark mode switch --}}
                         </div>
                         <div class="tab-pane" id="security">
                             <h6>SECURITY SETTINGS</h6>

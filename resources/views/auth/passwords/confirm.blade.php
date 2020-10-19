@@ -3,7 +3,7 @@
 @section('pageDescription', 'The description of the confirm page.')
 
 @section('content')
-    <div class="m-10 d-flex justify-content-between align-items-center h-100">
+    <div class="m-10 d-flex justify-content-between align-items-center h-100 auth-full-height">
         <div class="h-75 d-flex align-items-center justify-content-center" style="flex: 2">
             <!-- Registeration Form -->
             <div class="w-75">

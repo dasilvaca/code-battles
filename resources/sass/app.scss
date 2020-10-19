@@ -18,12 +18,12 @@ $toggle-control-ease: ease-in;
 $toggle-radius: $toggle-height / 2;
 $toggle-control-size: $toggle-height - ($toggle-gutter * 2);
 
-
+// dark mode
 @media (prefers-color-scheme: dark) {
     html[theme='dark-theme'] {
         filter: invert(1) hue-rotate(180deg);
 
-        .not-darken{
+        .not-darken {
             filter: invert(1) hue-rotate(180deg);
         }
     }
@@ -135,26 +135,42 @@ body {
     }
 }
 
-.home-full-height{
-    background: #213138;
-    color: $light;
+nav {
+    z-index: 9999;
+}
 
-    @include media-breakpoint-up(md){
+.auth-full-height {
+    @include media-breakpoint-up(md) {
         position: fixed;
         top: 0;
         right: 0;
         bottom: 0;
         left: 0;
     }
+}
 
-    .logo{
+.home-full-height {
+    z-index: 0;
+    background: $background-color;
+    color: $light;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    @include media-breakpoint-down(md) {
+        width: 100%;
+    }
+
+    .logo {
         display: block;
         margin: 0 auto 1rem;
         max-width: 120px;
         height: auto;
     }
 
-    .content-area{
+    .content-area {
         padding-left: 15px;
         padding-right: 15px;
         max-width: 1400px;
@@ -162,31 +178,31 @@ body {
         margin-right: auto;
     }
 
-    .sidebar{
-        background: rgba(black, 0.1);
+    .sidebar {
         padding: 2rem 1rem;
         height: 100vh;
         overflow: auto;
+        background-color: $font-color;
 
-        @include media-breakpoint-up(md){
+        @include media-breakpoint-up(md) {
             height: auto;
         }
 
-        .title{
+        .title {
             text-align: center;
         }
 
-        .home-links{
+        .home-links {
             list-style: none;
             padding: 0;
             margin: 0;
 
-            li{
+            li {
                 padding: 0;
                 margin: 0.2rem 0;
             }
 
-            a{
+            a {
                 position: relative;
                 display: block;
                 font-size: 1.4rem;
@@ -196,22 +212,22 @@ body {
                 background: rgba(black, 0.2);
                 transition: background-color .3s;
 
-                &:hover{
+                &:hover {
                     background: rgba(black, 0.4);
+                    color: $toggle-background-color-on;
                 }
 
-                small{
+                small {
                     font-size: 0.8rem;
                     display: block;
                 }
 
-                .icon{
+                .icon {
                     position: absolute;
                     left: 22px;
                     top: 50%;
                     transform: translate(0, -50%);
-                    width: 42px;
-                    height: auto;
+                    font-size: 35px;
                 }
             }
         }
