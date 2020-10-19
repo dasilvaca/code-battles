@@ -1,12 +1,7 @@
-@charset "UTF-8";
+@import url(https://fonts.googleapis.com/css2?family=Nunito:wght@300;
 
-/*!
- *  Font Awesome 4.7.0 by @davegandy - http://fontawesome.io - @fontawesome
- *  License - http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License)
- */
+400;600;700;800;900&display=swap);@charset "UTF-8";
 
-/* FONT PATH
- * -------------------------- */
 
 @font-face {
   font-family: "FontAwesome";
@@ -13942,8 +13937,20 @@ a.text-dark:focus {
   }
 }
 
+@media (prefers-color-scheme: dark) {
+  html[theme=dark-theme] {
+    filter: invert(1) hue-rotate(180deg);
+  }
+
+  html[theme=dark-theme] .not-darken {
+    filter: invert(1) hue-rotate(180deg);
+  }
+}
+
 body {
-  color: #1a202c;
+  font-family: "Nunito", sans-serif !important;
+  color: #1a202c !important;
+  background-color: #fafafa !important;
 }
 
 .main-body {
@@ -13987,15 +13994,67 @@ body {
   margin-bottom: 1rem !important;
 }
 
-.bg-gray-300 {
-  background-color: #e2e8f0;
-}
-
 .h-100 {
   height: 100% !important;
 }
 
 .shadow-none {
   box-shadow: none !important;
+}
+
+.nav i {
+  font-size: 1.5em;
+}
+
+.toggle-control {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.toggle-control input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.toggle-control input:checked ~ .control {
+  background-color: #007bff;
+}
+
+.toggle-control input:checked ~ .control:after {
+  left: 20px;
+}
+
+.toggle-control .control {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 20px;
+  width: 35px;
+  border-radius: 10px;
+  background-color: darkgray;
+  transition: background-color 0.15s ease-in;
+}
+
+.toggle-control .control:after {
+  content: "";
+  position: absolute;
+  left: 5px;
+  top: 5px;
+  width: 10px;
+  height: 10px;
+  border-radius: 10px;
+  background: white;
+  transition: left 0.15s ease-in;
 }
 
